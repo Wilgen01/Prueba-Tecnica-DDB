@@ -1,0 +1,23 @@
+.header{
+    background-color: black;
+    width: 100%;
+    padding: 1rem;
+
+    .header__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header__left-icons,
+        .header__right-icons{
+            display: flex;
+            align-items: center;
+
+            .header__icon{
+                margin: 0 .5rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
