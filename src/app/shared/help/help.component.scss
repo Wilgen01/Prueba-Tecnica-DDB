@@ -1,0 +1,38 @@
+.help{
+    background-color: var(--color-black-bg);
+    padding: 3rem 0;
+
+    &__title{
+        font-weight: bold;
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        text-align: center;
+        color: white;
+        margin-bottom: 1.5rem;
+    }
+     &__actions{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+
+        &-icon{
+            background-color: white;
+            margin-bottom: 1.5rem;
+            border-radius: 100%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+
+            img{
+                width: 30%;
+            }
+        }
+
+        &-name{
+            color: white;
+            text-align: center;
+            font-weight: 600;
+        }
+     }
+}
