@@ -1,22 +1,45 @@
 .header{
     background-color: black;
     width: 100%;
+    max-height: 100px;
     padding: 1rem;
 
-    .header__container{
+    &__container{
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .header__left-icons,
-        .header__right-icons{
-            display: flex;
-            align-items: center;
+        @media (min-width: 769px) {
+            max-width: 75%;
+            margin: auto;
+        }
+    }
 
-            .header__icon{
-                margin: 0 .5rem;
-                cursor: pointer;
-            }
+
+    &__left-icons,
+    &__right-icons{
+        display: flex;
+        align-items: center;
+
+        .header__icon{
+            margin: 0 .5rem;
+            cursor: pointer;
+        }
+
+        .header__icon--cart{
+            position: relative;
+            margin-top: 6px;
+        }
+
+        .header__cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
         }
     }
 
