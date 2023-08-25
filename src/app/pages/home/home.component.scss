@@ -13,4 +13,10 @@
         font-weight: bold;
         margin: 2.5rem 0 2rem;
     }
+
+    &__cards{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(min(35%, 17rem), 1fr));
+    }
 }
