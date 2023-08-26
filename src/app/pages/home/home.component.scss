@@ -39,4 +39,30 @@
             }
         }
     }
+
+    &__button-container{
+        position: fixed;
+        width: 100%;
+        bottom: 1rem;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button-filter{
+        align-items: center;
+        background-color: var(--color-blue);
+        border-radius: var(--border-radius-s);
+        color: white;
+        display: flex;
+        font-weight: bold;
+        justify-content: center;
+        padding: .5rem 1rem;
+        text-transform: uppercase;
+        
+        &:disabled{
+            opacity: .6;
+        }
+        
+    }
 }

@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
 import { ProductCardComponent } from '../components/product-card/product-card.component';
 import { HelpComponent } from '../shared/help/help.component';
+import { FilterModalComponent } from '../components/filter-modal/filter-modal.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HelpComponent } from '../shared/help/help.component';
     CommonModule,
     PagesRoutingModule,
     ProductCardComponent,
-    HelpComponent
+    HelpComponent,
+    FilterModalComponent
   ]
 })
 export class PagesModule { }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -11,16 +11,18 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./filter-modal.component.scss']
 })
 export class FilterModalComponent {
+
+  @Input()isModalOpen: boolean = false;
+  @Output()modalClose = new EventEmitter<boolean>();
+
   public filters = [
     { id: 1, name: "Rubia", selected: false },
     { id: 2, name: "Morena", selected: false },
     { id: 3, name: "Roja", selected: false }
   ]
 
-  public isModalOpen: boolean = false;
-
-
   closeModal() {
     this.isModalOpen = false;
+    this.modalClose.emit(true);
   }
 }

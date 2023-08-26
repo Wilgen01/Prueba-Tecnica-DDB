@@ -17,9 +17,13 @@
     max-width: 600px;
     background-color: white;
     z-index: 1001;
-    left: 50%;
-    right: 50%;
-    margin-left: -300px;
+    
+
+    @media (min-width: 600px) {
+        left: 50%;
+        right: 50%;
+        margin-left: -300px;
+    }
     
 
     &__close{

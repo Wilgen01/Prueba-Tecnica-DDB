@@ -7,19 +7,24 @@ import { ProductsService } from 'src/app/shared/services/products/products.servi
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
   private readonly _productsService = inject(ProductsService);
 
   public beers: Beer[] = []
-  
+  public isModalOpen: boolean = false;
+
   ngOnInit(): void {
     this.getBeers();
   }
 
-  getBeers() {
+  public getBeers() {
     this._productsService.getBeers().subscribe(res => {
       this.beers = res
-    })  
+    })
+  }
+
+  public openModal() {
+    this.isModalOpen = true;
   }
 
 }
