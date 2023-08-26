@@ -2,7 +2,7 @@
     <h1 class="home__title">Cervezas</h1>
 
     <div class="home__cards">
-        <app-product-card *ngFor="let beer of beers" [beer]="beer"></app-product-card>
+        <app-product-card *ngFor="let beer of filteredBeers.length > 0 ? filteredBeers : beers" [beer]="beer"></app-product-card>
     </div>
 
     <article class="home__cta">
@@ -25,4 +25,4 @@
 
 </div>
 
-<app-filter-modal [isModalOpen]="isModalOpen" (modalClose)="isModalOpen = false"></app-filter-modal>
+<app-filter-modal [isModalOpen]="isModalOpen" (modalClose)="isModalOpen = false" (filtersSelected)="onChangeFilters($event)"></app-filter-modal>

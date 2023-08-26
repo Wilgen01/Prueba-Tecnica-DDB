@@ -5,7 +5,7 @@
         "description": "Cassels & Sons Brewing. Cerveza porter y stout",
         "img": "assets/products/1.png",
         "price": 75000,
-        "category": "morena"
+        "category": 2
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "description": "La Souche Franc-Boisd’hiver. Cerveza pale.",
         "img": "assets/products/2.png",
         "price": 85300,
-        "category": "rubia"
+        "category": 1
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "description": "India Pale Ale del año 2019. Nº 001 Red IPA.",
         "img": "assets/products/3.png",
         "price": 75000,
-        "category": "rubia"
+        "category": 1
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "description": "Ales Prairie Noir Whiskey Barrel Aged Imperial Stout 12oz",
         "img": "assets/products/4.png",
         "price": 85300,
-        "category": "morena"
+        "category": 2
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "description": "The Lost Abbey Citrus Sin American Wild Ale 750ml",
         "img": "assets/products/5.png",
         "price": 75000,
-        "category": "rubia"
+        "category": 1
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "description": "Prairie Artisa Ales Paradise Imperial Stout 12oz",
         "img": "assets/products/6.png",
         "price": 85300,
-        "category": "morena"
+        "category": 2
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "description": "Hitachino Nest Beer Red Rice Ale 330ml",
         "img": "assets/products/7.png",
         "price": 85300,
-        "category": "roja"
+        "category": 3
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "description": "Cascade Brewing 2017 Brunch Line BA NORTHWEST Sour Ale",
         "img": "assets/products/8.png",
         "price": 175000,
-        "category": "roja"
+        "category": 3
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "description": "Topa Topa BREWING CO. 5th Year Anniversary clear Ipa 16oz",
         "img": "assets/products/9.png",
         "price": 85300,
-        "category": "rubia"
+        "category": 1
     },
     {
         "id": 10,
@@ -77,6 +77,6 @@
         "description": "Brown Ale, Brown Mira American Style.",
         "img": "assets/products/10.png",
         "price": 375000,
-        "category": "morena"
+        "category": 2
     }
 ]

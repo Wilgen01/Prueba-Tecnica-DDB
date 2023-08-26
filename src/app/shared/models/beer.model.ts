@@ -8,7 +8,7 @@ export interface Beer {
 }
 
 export enum BeerCategory {
-    Morena = "morena",
-    Roja = "roja",
-    Rubia = "rubia",
+    Rubia = 1,
+    Morena = 2,
+    Roja = 3,
 }
