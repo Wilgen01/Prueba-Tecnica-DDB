@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Beer } from '../../shared/models/beer.model';
 
 @Component({
   selector: 'app-product-card',
@@ -9,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent {
-
+  @Input() beer !: Beer
 }

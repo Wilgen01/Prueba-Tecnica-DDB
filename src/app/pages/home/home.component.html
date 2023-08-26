@@ -2,14 +2,7 @@
     <h1 class="home__title">Cervezas</h1>
 
     <div class="home__cards">
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
-        <app-product-card></app-product-card>
+        <app-product-card *ngFor="let beer of beers" [beer]="beer"></app-product-card>
     </div>
 
     <article class="home__cta">

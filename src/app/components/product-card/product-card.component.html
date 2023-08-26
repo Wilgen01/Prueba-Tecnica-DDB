@@ -1,9 +1,9 @@
-<article class="card">
+<article class="card" >
     <div class="card__body">
-        <img class="card__img" src="assets/products/beer (1).png" alt="">
-        <h2 class="card__title">Cassels Milk Stou</h2>
-        <p class="card__desc">Cassels & Sons Brewing. Cerveza porter y stout</p>
-        <span class="card__price">$75.000</span>
+        <img class="card__img" [src]="beer.img" alt="">
+        <h2 class="card__title">{{beer.name}}</h2>
+        <p class="card__desc">{{beer.description}}</p>
+        <span class="card__price">{{beer.price | currency:'USD':'symbol':'1.0-0'}}</span>
     </div>
     <div class="card__cta">
         <a class="card__add" href="#">Agregar</a>
