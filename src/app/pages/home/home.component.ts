@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   public beers: Beer[] = []
   public filteredBeers: Beer[] = []
   public isModalOpen: boolean = false;
+  public selectedFilters : Filter[] = [];
 
   ngOnInit(): void {
     this.getBeers();
@@ -30,16 +31,7 @@ export class HomeComponent implements OnInit {
   }
 
   public onChangeFilters(filters: Filter[]){
-    if (filters.length == 0) {
-      this.filteredBeers = []
-      return
-    }
-
-    console.log('pasó');
-    
-    this.filteredBeers = this.beers.filter(beer => {
-      return filters.some(category => beer.category == category.id)
-    })
+    this.selectedFilters = filters;
   }
 
 }

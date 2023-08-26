@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductCardComponent } from '../components/product-card/product-card.component';
 import { HelpComponent } from '../shared/help/help.component';
 import { FilterModalComponent } from '../components/filter-modal/filter-modal.component';
+import { PipesModule } from '../shared/pipes/pipes.module';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { FilterModalComponent } from '../components/filter-modal/filter-modal.co
   imports: [
     CommonModule,
     PagesRoutingModule,
+    PipesModule,
     ProductCardComponent,
     HelpComponent,
     FilterModalComponent
