@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   private readonly _productsService = inject(ProductsService);
 
   public beers: Beer[] = []
-  public filteredBeers: Beer[] = []
   public isModalOpen: boolean = false;
   public selectedFilters : Filter[] = [];
 

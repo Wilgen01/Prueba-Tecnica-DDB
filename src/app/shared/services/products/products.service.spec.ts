@@ -8,7 +8,7 @@ import { of } from 'rxjs';
 
 describe('ProductsService', () => {
   let service: ProductsService;
-  let httpClientSpy: {get : jasmine.Spy};
+  let httpClientSpy: jasmine.SpyObj<HttpClient>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -17,7 +17,7 @@ describe('ProductsService', () => {
       ]
     });
     httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
-    service = new ProductsService(<any> httpClientSpy);
+    service = new ProductsService(httpClientSpy);
   });
 
   it('should be created', () => {
