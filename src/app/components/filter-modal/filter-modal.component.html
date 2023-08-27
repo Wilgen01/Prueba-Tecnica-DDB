@@ -1,5 +1,5 @@
 <div *ngIf="isModalOpen" class="overlay"></div>
-<section *ngIf="isModalOpen" class="modal">
+<section *ngIf="isModalOpen" class="modal" [@slideInOut]>
 
     <button class="modal__close" (click)="closeModal()">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

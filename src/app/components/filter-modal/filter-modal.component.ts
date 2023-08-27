@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Filter } from 'src/app/shared/models/filter.modal';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 
 @Component({
@@ -9,7 +10,18 @@ import { Filter } from 'src/app/shared/models/filter.modal';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './filter-modal.component.html',
-  styleUrls: ['./filter-modal.component.scss']
+  styleUrls: ['./filter-modal.component.scss'],
+  animations: [
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({ transform: 'translateY(100%)' }),
+        animate('200ms', style({ transform: 'translateY(0)' })),
+      ]),
+      transition(':leave', [
+        animate('200ms', style({ transform: 'translateY(100%)' })),
+      ]),
+    ]),
+  ],
 })
 export class FilterModalComponent {
 
