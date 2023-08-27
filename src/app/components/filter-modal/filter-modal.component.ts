@@ -19,20 +19,27 @@ export class FilterModalComponent {
 
   public filterCount: number = 0
 
-
   public filters: Filter[] = [
     { id: 1, name: "Rubia", selected: false },
     { id: 2, name: "Morena", selected: false },
     { id: 3, name: "Roja", selected: false }
   ]
+  public appliedFilters: Filter[] = structuredClone(this.filters);
 
   public closeModal() {
+    this.filters = structuredClone(this.appliedFilters);
+    this.setFilterCount();
     this.isModalOpen = false;
     this.modalClose.emit(true);
   }
 
+  /**
+   * Solo Filtrará cuando se de click en el botón "Filtrar"
+   * De lo contrario se regresan los filtros anteriores
+   */
   public onFilter() {
     const filtersSelected = this.onFilterInputsChange();
+    this.appliedFilters = structuredClone(this.filters)
     this.filtersSelected.emit(filtersSelected)
     this.closeModal();
   }
@@ -41,6 +48,14 @@ export class FilterModalComponent {
     const filtersSelected = this.filters.filter(item => item.selected)
     this.filterCount = filtersSelected.length
     return filtersSelected;
+  }
+
+  public setFilterCount(){
+    this.filterCount = this.getSelectedFilters().length;
+  }
+
+  public getSelectedFilters(){
+    return this.filters.filter(item => item.selected);
   }
 
   public clearFilters(){
