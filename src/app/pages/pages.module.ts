@@ -7,6 +7,7 @@ import { ProductCardComponent } from '../components/product-card/product-card.co
 import { HelpComponent } from '../shared/help/help.component';
 import { FilterModalComponent } from '../components/filter-modal/filter-modal.component';
 import { PipesModule } from '../shared/pipes/pipes.module';
+import { SkeletonCardComponent } from '../components/skeleton-card/skeleton-card.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PipesModule } from '../shared/pipes/pipes.module';
     PipesModule,
     ProductCardComponent,
     HelpComponent,
-    FilterModalComponent
+    FilterModalComponent,
+    SkeletonCardComponent
   ]
 })
 export class PagesModule { }

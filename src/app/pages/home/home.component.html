@@ -2,7 +2,14 @@
     <h1 class="home__title">Cervezas</h1>
 
     <div class="home__cards">
-        <app-product-card *ngFor="let beer of beers | filter:selectedFilters" [beer]="beer"></app-product-card>
+        <ng-container *ngIf="(beers | filter:selectedFilters).length > 0 ; else loading">
+            <app-product-card *ngFor="let beer of beers | filter:selectedFilters" [@fadeInOut]="'in'" [beer]="beer"></app-product-card>
+        </ng-container>
+        
+        <ng-template #loading>
+            <app-skeleton-card *ngFor="let item of [].constructor(10)" [@fadeInOut]="'out'"></app-skeleton-card>
+        </ng-template>
+        
     </div>
 
     <article class="home__cta">
