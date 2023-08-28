@@ -27,7 +27,7 @@
     }
 
     &__desc{
-        color: var(--color-gray-dark);
+        color: var(--color-font-gray-dark);
         font-size: clamp(.75rem, .9vw, 1rem);
         margin-bottom: .5rem;
         flex-grow: 1;
@@ -51,7 +51,7 @@
             text-decoration: none;
             font-weight: 600;
             font-size: clamp(1rem, 1vw, 1.5rem);
-            color: var(--color-blue);
+            color: var(--color-blue-fonts);
         }
     }
 }

@@ -11,6 +11,7 @@ import { of } from 'rxjs';
 import { inject } from '@angular/core';
 import { ProductCardComponent } from 'src/app/components/product-card/product-card.component';
 import { Filter } from 'src/app/shared/models/filter.modal';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -44,7 +45,8 @@ describe('HomeComponent', () => {
         PipesModule,
         HelpComponent,
         FilterModalComponent,
-        ProductCardComponent
+        ProductCardComponent,
+        BrowserAnimationsModule
       ],
       declarations: [HomeComponent],
       providers: [{ provide: ProductsService, useValue: { getBeers: () => of(mockBeers) } }]

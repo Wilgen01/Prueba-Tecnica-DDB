@@ -6,6 +6,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
 
     @media (min-width: 769px) {
         padding: 1rem 0;
@@ -27,27 +28,38 @@
     &__right-icons{
         display: flex;
         align-items: center;
+    }
 
-        .header__icon{
-            margin: 0 .5rem;
-            cursor: pointer;
+    &__icon{
+        margin: 0 .75rem;
+        cursor: pointer;
+
+        @media (min-width: 769px) {
+            width: 35px;
+            height: 35px;
         }
 
-        .header__icon--cart{
+        &--cart{
             position: relative;
-            margin-top: 6px;
+            display: flex;
+            align-items: center;
         }
 
-        .header__cart-badge {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background-color: var(--color-blue);
-            color: white;
-            border-radius: 50%;
-            padding: 2px 6px;
-            font-size: 12px;
+        &--theme{
+            margin: 0 .75rem;
         }
+    }
+
+
+    &__cart-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: var(--color-blue);
+        color: white;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 12px;
     }
 
 }
