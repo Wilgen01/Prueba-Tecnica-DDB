@@ -11,7 +11,7 @@ Se realizaron pruebas unitarias de los componentes más esenciales
 
 Resultado de la maquetación
 
-![Mi Imagen](src/assets/git/mobile.PNG)
+![Mi Imagen](src/assets/git/mobile.png)
 
 
 ## Development server
